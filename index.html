@@ -11,29 +11,48 @@
 
 <body>
     <header>
+
         <div class="header-row">
 
-                
             <div class="square 1">
-                    
                 <a href="index.html" class="link">
                     <h2>Home</h2>
                 </a>
-            
             </div>
-                
+            
             <div class="square 2">
                 <a href="about.html" class="link">
                     <h2>About</h2>
                 </a>
             </div>
-                
+            
             <div class="square 3">
                 <a href="" class="link">
                     <h2>Contacts</h2>
                 </a>
             </div>
-        </div>
+    
+            <div class="dropdown square 4">
+                <a href="#" class="dropbtn link">
+                    <h2>Services</h2>
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Service 1</a>
+                    <a href="#">Service 2</a>
+                    <a href="#">Service 3</a>
+                </div>
+            </div>
+            
+            <div class="square dark">
+                <a href="#" class="link" onclick="toggleDarkMode()">
+                    <h2>Dark Mode</h2>
+                </a>
+                <script>
+                    function toggleDarkMode() {
+                        document.body.classList.toggle('dark-mode');
+                    }
+                </script>
+            </div>
     </header>
     <main>
         <h1>
