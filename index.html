@@ -11,27 +11,22 @@
 
 <body>
     <header>
-
         <div class="header-row">
-
             <div class="square 1">
                 <a href="index.html" class="link">
                     <h2>Home</h2>
                 </a>
             </div>
-            
             <div class="square 2">
                 <a href="about.html" class="link">
                     <h2>About</h2>
                 </a>
             </div>
-            
             <div class="square 3">
-                <a href="" class="link">
+                <a href="#" class="link">
                     <h2>Contacts</h2>
                 </a>
             </div>
-    
             <div class="dropdown square 4">
                 <a href="#" class="dropbtn link">
                     <h2>Services</h2>
@@ -42,37 +37,42 @@
                     <a href="#">Service 3</a>
                 </div>
             </div>
-            
             <div class="square dark">
                 <a href="#" class="link" onclick="toggleDarkMode()">
                     <h2>Dark Mode</h2>
                 </a>
-                <script>
-                    function toggleDarkMode() {
-                        document.body.classList.toggle('dark-mode');
-                    }
-                </script>
             </div>
+        </div>
     </header>
     <main>
-        <h1>
-            Sitas ir kautkas
-        </h1>
-        <h2>
-            Ir kkas ja
-        </h2>
-        <p>
-            sitas ir mans website dunno ko taisit ja godigi
-        </p>
-        <img src="https://notes.aimodels.fyi/content/images/2023/06/a_high_detail_shot_of_a_cat_wearing_a_suit_realism_8k_-n_9_.png" alt="L">
+        <h1>Sitas ir kautkas</h1>
+        <h2>Ir kkas ja</h2>
+        <p>sitas ir mans website dunno ko taisit ja godigi</p>
+
+        <div class="container">
+            <div class="box">
+                <h3>Box with Modal</h3>
+                <img src="https://notes.aimodels.fyi/content/images/2023/06/a_high_detail_shot_of_a_cat_wearing_a_suit_realism_8k_-n_9_.png" alt="Image of a cat in a suit">
+                <p>Click the button below to open the modal.</p>
+                <button onclick="openModal()">Open Modal</button>
+            </div>
+        </div>
+        
+        <!-- Modal Structure -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Modal</h2>
+                <p>Teksts kkads ja ir</p>
+                <h3>About This Modal</h3>
+                <p>Velreiz kkads teksts</p>
+            </div>
+        </div>
+
         <aside>
-            <h2>
-
-                Sitas ir aside ar tuturlipup tekstu
-
-            </h2>
+            <h2>Sitas ir aside ar tuturlipup tekstu<br>kinda cray</h2>
         </aside>
-
+        <br>
     <div class="container">
         <div class="box box 1">
             <img src="https://www.clipartmax.com/png/middle/180-1809318_picture-300-x-300-pixel.png" alt="bro">
@@ -94,20 +94,48 @@
         </div>
     </div>
         <footer>
+            
             <h2>
-
+                
                 Social media linki
                 <insta>
                     
                     <a href="https://www.instagram.com" target="_blank">
                         <img src="computer-icons-instagram-logo-sticker-logo-35ad5791fa627be046b9cc7340659bb0.png" alt="Instagram" class="insta">
                     </a>
-
+                    
                     
                 </insta>
             </h2>
-
+            
+            <p>&copy; 2024 Kkads website. All rights reserved.</p>
         </footer>
     </main>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Function to open the modal
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
