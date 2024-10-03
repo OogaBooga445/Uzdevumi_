@@ -8,9 +8,11 @@
     justify-content: center;
     align-items: flex-start;
 
-    background-color: #837878;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 62%, rgba(148,187,233,1) 100%);
     flex-wrap: wrap;
     padding: 20px;
+    border-bottom: solid pink;
 
 }
 
@@ -18,7 +20,8 @@
 
     width: 250px;
     margin: 15px;
-    background-color: #fff;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 27%, rgba(148,187,233,1) 100%);
     display: auto;
     flex-direction: column;
     justify-content: space-between;
@@ -35,14 +38,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     color: #333;
 }
+
 
 main {
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+    border-left: solid pink;
+    border-right: solid pink;
+    border-width: 1px;
 }
 
 /* Styling for the headings */
@@ -79,18 +87,23 @@ img {
 aside {
     background-color: #eee;
     padding: 15px;
-    margin-top: 20px;
-    border-left: 5px solid #ccc;
-    border-radius: 5px;
+    margin: 35px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
 }
 
 aside h2 {
-    color: #333;
+    color: black;
 }
-
+body.dark-mode .header-row {
+    background: rgb(97,95,96);
+    background: radial-gradient(circle, rgba(97,95,96,1) 0%, rgba(0,0,0,1) 100%);
+    border-bottom: 5px solid yellow; /* Yellow bottom border */
+}
 /* Footer (if needed) */
 .footer {
     background-color: #f0f0f0;
+    
     color: #333;
     padding: 20px;
     text-align: center;
@@ -111,15 +124,18 @@ body.dark-mode .footer {
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: #121212;
-    color: white;
+    background: rgb(97,95,96);
+    background: radial-gradient(circle, rgba(97,95,96,1) 27%, rgba(0,0,0,1) 100%);
 }
+
 
 /* .dark element styles */
 .dark {
     width: 250px;
     margin: 15px;
-    background-color: #fff;
+
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 27%, rgba(148,187,233,1) 100%);
     display: auto;
     flex-direction: column;
     justify-content: space-between;
@@ -132,13 +148,12 @@ body.dark-mode {
     
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
-}
+
 body.dark-mode main {
     background-color: #1e1e1e;
     color: #e0e0e0;
+    border-left: solid yellow;
+    border-right: solid yellow;
 }
 
 body.dark-mode h1 {
@@ -164,7 +179,8 @@ body.dark-mode aside {
 }
 
 body.dark-mode .dark {
-    background-color: #000000;
+    background: rgb(97,95,96);
+    background: radial-gradient(circle, rgba(97,95,96,1) 27%, rgba(0,0,0,1) 100%);
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     
@@ -174,7 +190,8 @@ body.dark-mode .dark .link {
 }
 
 body.dark-mode .square {
-    background-color: #333;
+    background: rgb(97,95,96);
+    background: radial-gradient(circle, rgba(97,95,96,1) 27%, rgba(0,0,0,1) 100%);
     color: white;  /* Ensure the text color inside the square changes to white */
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
@@ -218,7 +235,7 @@ body.dark-mode .square.dark a {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #f0f0f0;
+    background-color: none;
     flex-wrap: wrap;
     padding: 20px;
 }
@@ -268,7 +285,7 @@ body.dark-mode .square.dark a {
     padding: 8px 16px;
     background-color: yellow;
     border: none;
-    color: #000;
+    color: black;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -284,7 +301,7 @@ body.dark-mode .container {
 }
 
 body.dark-mode .box {
-    background-color: #333;
+    background-color: rgb(51, 50, 50);
     color: #f0f0f0;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
@@ -320,7 +337,7 @@ body.dark-mode .box button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #dfd8d8;
+    background-color: rgb(238,174,202);
     min-width: 250px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
