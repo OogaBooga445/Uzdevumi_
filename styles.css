@@ -1,18 +1,36 @@
-.insta {
-    width: 5%;
-    height: auto;
+.top {
+    justify-content: center;
+    display: flex;
 }
+img {
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.insta, .tiktok, .linkedin, .facebook { 
+    width: 50px;
+    height: 50px;
+}
+
+
 .header-row {
 
     display:flex;
     justify-content: center;
     align-items: flex-start;
 
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 62%, rgba(148,187,233,1) 100%);
+    background-color: #F2D1A8;
+
     flex-wrap: wrap;
     padding: 20px;
-    border-bottom: solid pink;
 
 }
 
@@ -20,8 +38,7 @@
 
     width: 250px;
     margin: 15px;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 27%, rgba(148,187,233,1) 100%);
+    background-color: #f7e6ca;
     display: auto;
     flex-direction: column;
     justify-content: space-between;
@@ -33,24 +50,19 @@
     flex-grow: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+/*72af8c*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-color: #72af8c;
     color: #333;
 }
 
 
 main {
     padding: 20px;
-    max-width: 900px;
     margin: 0 auto;
-    border-left: solid pink;
-    border-right: solid pink;
-    border-width: 1px;
 }
 
 /* Styling for the headings */
@@ -58,12 +70,19 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #000000;
+    justify-content: center;
+    display: flex;
 }
 
 h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
     color: #000000;
+    
+}
+main h2 {
+    justify-content: center;
+    display: flex;
 }
 
 /* Paragraph styling */
@@ -71,6 +90,8 @@ p {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
 }
 
 /* Image styling */
@@ -85,10 +106,10 @@ img {
 
 /* Styling for the aside element */
 aside {
-    background-color: #eee;
+    background-color: #F2D1A8;
     padding: 15px;
     margin: 35px;
-    border: 5px solid #ccc;
+    border: 5px solid #669B7C;
     border-radius: 10px;
 }
 
@@ -125,7 +146,7 @@ body.dark-mode .footer {
 /* Dark mode styles */
 body.dark-mode {
     background: rgb(97,95,96);
-    background: radial-gradient(circle, rgba(97,95,96,1) 27%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(97,95,96,1) 20%, rgba(0,0,0,1) 100%);
 }
 
 
@@ -134,8 +155,7 @@ body.dark-mode {
     width: 250px;
     margin: 15px;
 
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 27%, rgba(148,187,233,1) 100%);
+    background-color: #f7e6ca;
     display: auto;
     flex-direction: column;
     justify-content: space-between;
@@ -222,7 +242,7 @@ body.dark-mode .square.dark a {
 .square:hover {
     transform: scale(1.10); /* Enlarge the box */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    background-color: #dfd8d8;
+    background-color: #f0d8b3;
     
 }
 
@@ -241,9 +261,9 @@ body.dark-mode .square.dark a {
 }
 
 .box {
-    width: 250px;
+    width: 30%; /* Adjust width to fit 3 boxes in a row */
     margin: 15px;
-    background-color: #fff;
+    background-color: #F2D1A8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -256,7 +276,6 @@ body.dark-mode .square.dark a {
     min-height: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .box:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
@@ -283,16 +302,16 @@ body.dark-mode .square.dark a {
 
 .box button {
     padding: 8px 16px;
-    background-color: yellow;
+    background-color: #557669;
     border: none;
-    color: black;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .box button:hover {
-    background-color: #000;
-    color: yellow;
+    background-color: #669B7C;
+    color: rgb(255, 255, 255);
 }
 
 /* Dark mode styles */
