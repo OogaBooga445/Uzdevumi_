@@ -12,39 +12,57 @@
     <body>
         <header>
             <div class="header-row">
-            <img src="https://img.pikbest.com/png-images/20240516/black-cat-logo-vector-2_10565758.png!sw800" alt="logo">
-            <div class="square 1">
-                <a href="index.html" class="link">
-                    <h2>Home</h2>
-                </a>
-            </div>
-            <div class="square 2">
-                <a href="about.html" class="link">
-                    <h2>About</h2>
-                </a>
-            </div>
-            <div class="square 3">
-                <a href="#" class="link">
-                    <h2>Contacts</h2>
-                </a>
-            </div>
-            <div class="dropdown square 4">
-                <a href="#" class="dropbtn link">
-                    <h2>Services</h2>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Service 1</a>
-                    <a href="#">Service 2</a>
-                    <a href="#">Service 3</a>
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+                <div class="square 1">
+                    <a href="index.html" class="link">
+                        <h2>Home</h2>
+                    </a>
+                </div>
+                <div class="square 2">
+                    <a href="about.html" class="link">
+                        <h2>About</h2>
+                    </a>
+                </div>
+                <div class="square 3">
+                    <a href="#" class="link">
+                        <h2>Contacts</h2>
+                    </a>
+                </div>
+                <div class="dropdown square 4">
+                    <a href="#" class="dropbtn link">
+                        <h2>Services</h2>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                        <a href="#">Service 3</a>
+                    </div>
+                </div>
+                <div class="square dark">
+                    <a href="#" class="link" onclick="toggleDarkMode()">
+                        <h2>Dark Mode</h2>
+                    </a>
                 </div>
             </div>
-            <div class="square dark">
-                <a href="#" class="link" onclick="toggleDarkMode()">
-                    <h2>Dark Mode</h2>
-                </a>
-            </div>
-        </div>
-    </header>
+            <!-- Hidden Menu for Mobile -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Service 1</a></li>
+                            <li><a href="#">Service 2</a></li>
+                            <li><a href="#">Service 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                </ul>
+            </nav>
+        </header>
+        
     <main>
         <h1>Cat Corp.</h1>
 
@@ -53,54 +71,85 @@
 
 
         <div class="container">
-            <div class="box">
+            <div class="box special-box">
                 <h3>Top worker of the month</h3>
                 <img src="https://notes.aimodels.fyi/content/images/2023/06/a_high_detail_shot_of_a_cat_wearing_a_suit_realism_8k_-n_9_.png" alt="Image of a cat in a suit">
                 <p>George Cattington</p>
-                <button onclick="openModal()">Learn more</button>
+                <button onclick="openModal('myModal')">Learn more</button>
             </div>
         </div>
+        
         
         <!-- Modal Structure -->
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="close" onclick="closeModal('myModal')">&times;</span>
                 <h2>George Cattington</h2>
-                <p>Our top salesperson this month. Total of 500 000$ worth of sales made this month.</p>
+                <p>Our top salesperson this month. Total of $500,000 worth of sales made this month.</p>
                 <img src="https://notes.aimodels.fyi/content/images/2023/06/a_high_detail_shot_of_a_cat_wearing_a_suit_realism_8k_-n_9_.png" alt="very cat" class="cat">
             </div>
         </div>
+        
 
         <aside>
             <h2>These are the rest of our best workers this month:</h2>
         </aside>
         <br>
-    <div class="container">
-        <div class="box box 1">
-            <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/db06e966-a36f-4104-b620-6cc3f498ab21/1a94ccd0-dbfb-4e54-9e2b-0446b574b94b.png" alt="bro">
-            <h3>John Cattson</h3>
-            <p>Senior team leader of sales</p>
-            <button>Bio</button>
+        <div class="container">
+            <div class="box box1">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/db06e966-a36f-4104-b620-6cc3f498ab21/1a94ccd0-dbfb-4e54-9e2b-0446b574b94b.png" alt="John Cattson">
+                <h3>John Cattson</h3>
+                <p>Senior team leader of sales</p>
+                <button onclick="openModal('modal1')">Bio</button>
+            </div>
+            <div class="box box2">
+                <img src="https://img.freepik.com/premium-photo/cat-suit-with-glasses-tie_786255-3395.jpg" alt="Frederic Cater">
+                <h3>Frederic Cater</h3>
+                <p>Department manager</p>
+                <button onclick="openModal('modal2')">Bio</button>
+            </div>
+            <div class="box box3">
+                <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/cat-suit-torie-tiffany.jpg" alt="Carl Caterino">
+                <h3>Carl Caterino</h3>
+                <p>Junior salesperson</p>
+                <button onclick="openModal('modal3')">Bio</button>
+            </div>
         </div>
-        <div class="box box 2">
-            <img src=" https://img.freepik.com/premium-photo/cat-suit-with-glasses-tie_786255-3395.jpg" alt="bro2">
-            <h3>Frederic Cater</h3>
-            <p>Department manager</p>
-            <button>Bio</button>
+        
+        <!-- Modal for John Cattson -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>John Cattson</h2>
+                <p>Senior team leader of sales. John has led the team with remarkable results for the past 3 years.</p>
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/db06e966-a36f-4104-b620-6cc3f498ab21/1a94ccd0-dbfb-4e54-9e2b-0446b574b94b.png" alt="John Cattson">
+            </div>
         </div>
-        <div class="box box 3">
-
-            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/cat-suit-torie-tiffany.jpg" alt="bro3">
-            <h3>Carl Caterino</h3>
-            <p>Junior salesperson</p>
-            <button>Bio</button>
+        
+        <!-- Modal for Frederic Cater -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Frederic Cater</h2>
+                <p>Department manager. Frederic has been crucial in overseeing the operations and ensuring smooth workflows.</p>
+                <img src="https://img.freepik.com/premium-photo/cat-suit-with-glasses-tie_786255-3395.jpg" alt="Frederic Cater">
+            </div>
         </div>
-    </div>
+        
+        <!-- Modal for Carl Caterino -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Carl Caterino</h2>
+                <p>Junior salesperson. Carl is a rising star in the team and has shown great potential in the company.</p>
+                <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/cat-suit-torie-tiffany.jpg" alt="Carl Caterino">
+            </div>
+        </div>
         <footer>
             
             <h2>
                 
-                Social media links
+                Our Social media
             </h2>
             <h2>
 
@@ -126,29 +175,46 @@
     </main>
     
     <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
 
-        // Get the modal
-        var modal = document.getElementById("myModal");
+// Function to open a specific modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
 
-        // Function to open the modal
-        function openModal() {
-            modal.style.display = "block";
-        }
+// Function to close a specific modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
 
-        // Function to close the modal
-        function closeModal() {
+// Close the modal when clicking outside of the modal content
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
+    });
+}
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.querySelectorAll('.dropdown-toggle');
 
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
+    dropdownToggle.forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            const dropdown = this.nextElementSibling; // Get the next sibling (the dropdown)
+            dropdown.classList.toggle('active'); // Toggle active class to show/hide dropdown
+        });
+    });
+});
+
     </script>
 </body>
 </html>
