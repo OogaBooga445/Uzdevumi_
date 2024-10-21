@@ -44,7 +44,6 @@
                     </a>
                 </div>
             </div>
-            <!-- Hidden Menu for Mobile -->
             <nav class="mobile-menu" id="mobileMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -62,14 +61,9 @@
                 </ul>
             </nav>
         </header>
-        
     <main>
         <h1>Cat Corp.</h1>
-
-
         <h2>All of our top workers are shown here.</h2>
-
-
         <div class="container">
             <div class="box special-box">
                 <h3>Top worker of the month</h3>
@@ -89,8 +83,6 @@
                 <img src="https://notes.aimodels.fyi/content/images/2023/06/a_high_detail_shot_of_a_cat_wearing_a_suit_realism_8k_-n_9_.png" alt="very cat" class="cat">
             </div>
         </div>
-        
-
         <aside>
             <h2>These are the rest of our best workers this month:</h2>
         </aside>
@@ -148,7 +140,6 @@
         <footer>
             
             <h2>
-                
                 Our Social media
             </h2>
             <h2>
@@ -176,45 +167,41 @@
     
     <script>
 // Function to toggle dark mode
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-}
-
-// Function to open a specific modal
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
-
-// Function to close a specific modal
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
-
-// Close the modal when clicking outside of the modal content
-window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = "none";
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
         }
-    });
-}
-function toggleMenu() {
-    var menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-}
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownToggle = document.querySelectorAll('.dropdown-toggle');
 
-    dropdownToggle.forEach(toggle => {
-        toggle.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const dropdown = this.nextElementSibling; // Get the next sibling (the dropdown)
-            dropdown.classList.toggle('active'); // Toggle active class to show/hide dropdown
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggle = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggle.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault(); 
+                    const dropdown = this.nextElementSibling; 
+                    dropdown.classList.toggle('active'); 
+                });
+            });
         });
-    });
-});
-
     </script>
 </body>
 </html>
