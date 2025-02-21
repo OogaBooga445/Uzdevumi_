@@ -4,6 +4,82 @@
     align-items: center;
     gap: 10px;
 }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between elements */
+    padding: 10px;
+}
+
+
+.Hotbg {
+    position: absolute;
+    top: 88px;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.Hotbg:hover > .Hotbg-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.Hotbg:hover > .Hotbg-btn {
+    background: azure;
+    color: black;
+}
+
+.Hotbg-btn {
+    color: #e84118;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: azure;
+    cursor: pointer;
+}
+
+.Hotbg-btn > i {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Hotbg-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: azure;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+}
+
+.Logo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    align-items: left;
+    margin-top: -80px;
+}
 
 .insta, .tiktok, .linkedin, .facebook { 
     width: 50px;
@@ -50,27 +126,27 @@ body {
 
 main {
     padding: 20px;
-    margin: 0 auto;
 }
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
     color: #000000;
-    justify-content: center;
+    justify-content: left;
     display: flex;
+    margin-left: 250px;
 }
 
 h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
     color: #000000;
-    
+
 }
 main h2 {
     justify-content: center;
     display: flex;
 }
+
 
 p {
     font-size: 1.1em;
@@ -80,14 +156,6 @@ p {
     display: flex;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 aside {
     background-color: #F2D1A8;
@@ -147,8 +215,6 @@ body.dark-mode {
 body.dark-mode main {
     background-color: #1e1e1e;
     color: #e0e0e0;
-    border-left: solid yellow;
-    border-right: solid yellow;
 }
 
 body.dark-mode h1 {
@@ -211,7 +277,7 @@ body.dark-mode .square.dark a {
 .square:hover {
     transform: scale(1.10);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    background-color: #ffdb58;
+    background-color: #d3d0c4;
 }
 
 .link {
@@ -270,16 +336,18 @@ body.dark-mode .square.dark a {
 
 .box button {
     padding: 8px 16px;
-    background-color: #557669;
+    background-color: #f8e6a4;
     border: none;
-    color: white;
+    color: black;
     border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
     cursor: pointer;
+    border-color: #000;
 }
 
 .box button:hover {
-    background-color: #669B7C;
-    color: rgb(255, 255, 255);
+    background-color: #d3c48c;
 }
 
 .special-box {
@@ -328,7 +396,7 @@ body.dark-mode .box button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f7e6ca;;
+    background-color: #f8e6a4;;
     min-width: 250px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -343,7 +411,7 @@ body.dark-mode .box button:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #cec0a9;;
+    background-color: #e0d095;;
 }
 
 .dropdown:hover .dropdown-content {
@@ -453,15 +521,15 @@ body.dark-mode .close:hover {
         background-color: #333; 
         border-bottom: 1px solid #444;
     }
-    
+
     .dark-mode .mobile-menu ul li a {
         color: #fff; 
     }
-    
+
     .dark-mode .mobile-menu ul li {
         border-bottom: 1px solid #555;
     }
-    
+
     .dark-mode .mobile-menu ul li a:hover {
         background-color: #555;
         color: #fff; 
@@ -472,17 +540,17 @@ body.dark-mode .close:hover {
         margin: 0; 
         list-style: none;
     }
-    
+
     .mobile-menu .dropdown li {
         text-align: left; 
         padding: 0.5rem 1rem; 
         border-bottom: 1px solid #444;
     }
-    
+
     .mobile-menu .dropdown li a {
         color: rgb(0, 0, 0);
     }
-    
+
     .dark-mode .mobile-menu .dropdown li a {
         color: #fff;
     }
@@ -493,4 +561,5 @@ body.dark-mode .close:hover {
     .container {
         flex-direction: column;
     }
+
 }
