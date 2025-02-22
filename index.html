@@ -12,13 +12,12 @@
     <body>
         <header>
           <div class="Hotbg">
-            <input type="text" name="" class="Hotbg-txt" placeholder="Search >>>">
+            <input type="text" name="" class="Hotbg-txt" placeholder="Search">
             <a href="#" class="Hotbg-btn">
                 <i class="fa fa-search"></i>
             </a>
         </div>
             <div class="header-row">
-                <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <div class="square 1">
                     <a href="index.html" class="link">
                         <h2>Home</h2>
@@ -30,7 +29,7 @@
                     </a>
                 </div>
                 <div class="square 3">
-                    <a href="#" class="link">
+                    <a href="account.html" class="link">
                         <h2>Account</h2>
                     </a>
                 </div>
@@ -40,23 +39,9 @@
                     </a>
                 </div>
             </div>
-            <nav class="mobile-menu" id="mobileMenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li>
-                        <a href="#" class="dropdown-toggle">Services</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Service 1</a></li>
-                            <li><a href="#">Service 2</a></li>
-                            <li><a href="#">Service 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
-                </ul>
-            </nav>
         </header>
     <main>
+        
         
         <h1>Footbalyze</h1>
             <div class="flexbox">
@@ -95,38 +80,7 @@
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
-
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
-        }
-        function toggleMenu() {
-            var menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("active");
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdownToggle = document.querySelectorAll('.dropdown-toggle');
-
-            dropdownToggle.forEach(toggle => {
-                toggle.addEventListener('click', function (e) {
-                    e.preventDefault(); 
-                    const dropdown = this.nextElementSibling; 
-                    dropdown.classList.toggle('active'); 
-                });
-            });
-        });
+        
     </script>
 </body>
 </html>
