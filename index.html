@@ -6,41 +6,12 @@
         <title>Footbalyze</title>
         
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     
     <body>
-        <header>
-          <div class="Hotbg">
-            <input type="text" name="" class="Hotbg-txt" placeholder="Search">
-            <a href="#" class="Hotbg-btn">
-                <i class="fa fa-search"></i>
-            </a>
-        </div>
-            <div class="header-row">
-                <div class="square 1">
-                    <a href="index.html" class="link">
-                        <h2>Home</h2>
-                    </a>
-                </div>
-                <div class="square 2">
-                    <a href="about.html" class="link">
-                        <h2>About</h2>
-                    </a>
-                </div>
-                <div class="square 3">
-                    <a href="account.html" class="link">
-                        <h2>Account</h2>
-                    </a>
-                </div>
-                <div class="square dark">
-                    <a href="#" class="link" onclick="toggleDarkMode()">
-                        <h2>Dark Mode</h2>
-                    </a>
-                </div>
-            </div>
-        </header>
+
     <main>
+        <div id="header-placeholder"></div>
         
         
         <h1>Footbalyze</h1>
@@ -76,11 +47,7 @@
         </footer>
     </main>
     
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-        
-    </script>
+    <script src="script.js"></script>
+
 </body>
 </html>
